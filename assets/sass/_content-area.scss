@@ -1,0 +1,13 @@
+#filter {
+  background: $grey;
+  // height: 100vh;
+  // width: 30vh;
+
+  select {
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $darkgrey;
+  }
+}
