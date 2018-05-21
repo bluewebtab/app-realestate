@@ -9,6 +9,6 @@ export default class Listings extends Component {
   }
 
   render() {
-    return <section className="listings">Listings</section>;
+    return <section className="listings">List</section>;
   }
 }
