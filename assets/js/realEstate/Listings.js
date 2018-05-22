@@ -33,19 +33,19 @@ export default class Listings extends Component {
             <div className="listing-img">
               <span className="Address">Address </span>
               <div className="details">
-                <div className="user-img">userimg</div>
+                <div className="user-img">img</div>
                 <div className="user-details">
                   <span className="user-name">Jane Doe</span>
                   <span className="post-date">05/20/18</span>
                 </div>
                 <div className="listing-details">
                   <div className="floor-space">
-                    <i className="far fa-square" />
+                    <i className="ico far fa-square" />
+                    <span>1000 ft&sup2;</span>
                   </div>
-                  <span>1000 ft&sup2;</span>
                 </div>
                 <div className="bedrooms">
-                  <i className="fas fa-bed" />
+                  <i className="ico fas fa-bed" />
                   <span>3 bedrooms</span>
                 </div>
               </div>

@@ -426,7 +426,7 @@ var Listings = function (_Component) {
                 _react2.default.createElement(
                   "div",
                   { className: "user-img" },
-                  "userimg"
+                  "img"
                 ),
                 _react2.default.createElement(
                   "div",
@@ -448,18 +448,18 @@ var Listings = function (_Component) {
                   _react2.default.createElement(
                     "div",
                     { className: "floor-space" },
-                    _react2.default.createElement("i", { className: "far fa-square" })
-                  ),
-                  _react2.default.createElement(
-                    "span",
-                    null,
-                    "1000 ft\xB2"
+                    _react2.default.createElement("i", { className: "ico far fa-square" }),
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "1000 ft\xB2"
+                    )
                   )
                 ),
                 _react2.default.createElement(
                   "div",
                   { className: "bedrooms" },
-                  _react2.default.createElement("i", { className: "fas fa-bed" }),
+                  _react2.default.createElement("i", { className: "ico fas fa-bed" }),
                   _react2.default.createElement(
                     "span",
                     null,

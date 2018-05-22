@@ -142,6 +142,7 @@
       border-top-right-radius: 5px;
 
       .details {
+        padding: 30px;
         position: absolute;
         top: 0;
         left: 0;
@@ -172,6 +173,52 @@
           rgba(78, 2, 229, 0.8) 0%,
           rgba(157, 28, 237, 0.8) 100%
         );
+
+        .user-img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px solid white;
+          display: inline-block;
+          background: url("https://image1.apartmentfinder.com/i2/Uh7pU-5z2gxB-ly2VsPGufzUCh0zPkDZH1YOZKjU6u8/110/cielo-apartments-charlotte-nc-saltwater-pool-and-courtyard.jpg")
+            no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+        .user-details {
+          vertical-align: top;
+          display: inline-block;
+          width: 70%;
+          margin-left: 20px;
+          .user-name {
+            font-weight: 300;
+            font-size: 0.9rem;
+            display: block;
+            color: rgba(255, 255, 255, 1);
+            margin-top: 3px;
+            margin-bottom: 5px;
+          }
+          .post-date {
+            font-size: 0.9rem;
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+        .floor-space {
+          .ico {
+            display: inline-block;
+          }
+        }
+        .bedrooms {
+          .ico {
+            display: inline-block;
+          }
+          span {
+            display: inline-block;
+          }
+        }
       }
     }
   }
