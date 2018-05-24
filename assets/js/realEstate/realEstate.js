@@ -11,16 +11,21 @@ class App extends Component {
     this.state = {
       name: "Joe",
       listingsData,
+      city: "All",
+      homeType: "All",
+      bedrooms: "0",
       min_price: 0,
       max_price: 10000000,
       min_floor_space: 0,
-      max_floor_space: 50000,
+      max_floor_space: 10000,
       elevator: false,
       swimming_pool: false,
-      gym: false
+      gym: false,
+      filteredData: listingsData
     };
 
     this.change = this.change.bind(this);
+    this.filteredData = this.filteredData.bind(this);
   }
   change(event) {
     var name = event.target.name;
@@ -34,8 +39,35 @@ class App extends Component {
       },
       () => {
         console.log(this.state);
+        this.filteredData();
       }
     );
+  }
+  filteredData() {
+    var newData = this.state.listingsData.filter(item => {
+      return (
+        item.price >= this.state.min_price &&
+        item.price <= this.state.max_price &&
+        item.floorSpace >= this.state.min_floor_space &&
+        item.floorSpace <= this.state.max_floor_space &&
+        item.rooms >= this.state.bedrooms
+      );
+    });
+
+    if (this.state.city != "All") {
+      newData = newData.filter(item => {
+        return item.city == this.state.city;
+      });
+    }
+    if (this.state.homeType != "All") {
+      newData = newData.filter(item => {
+        return item.homeType == this.state.homeType;
+      });
+    }
+
+    this.setState({
+      filteredData: newData
+    });
   }
   render() {
     return (
@@ -43,7 +75,7 @@ class App extends Component {
         <Header />
         <section id="content-area">
           <Filter change={this.change} globalState={this.state} />
-          <Listings listingsData={this.state.listingsData} />
+          <Listings listingsData={this.state.filteredData} />
         </section>
       </div>
     );

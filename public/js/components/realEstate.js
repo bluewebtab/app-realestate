@@ -148,16 +148,21 @@ var App = function (_Component) {
     _this.state = {
       name: "Joe",
       listingsData: _listingsData2.default,
+      city: "All",
+      homeType: "All",
+      bedrooms: "0",
       min_price: 0,
       max_price: 10000000,
       min_floor_space: 0,
-      max_floor_space: 50000,
+      max_floor_space: 10000,
       elevator: false,
       swimming_pool: false,
-      gym: false
+      gym: false,
+      filteredData: _listingsData2.default
     };
 
     _this.change = _this.change.bind(_this);
+    _this.filteredData = _this.filteredData.bind(_this);
     return _this;
   }
 
@@ -170,6 +175,31 @@ var App = function (_Component) {
       var value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+        _this2.filteredData();
+      });
+    }
+  }, {
+    key: "filteredData",
+    value: function filteredData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space && item.rooms >= _this3.state.bedrooms;
+      });
+
+      if (this.state.city != "All") {
+        newData = newData.filter(function (item) {
+          return item.city == _this3.state.city;
+        });
+      }
+      if (this.state.homeType != "All") {
+        newData = newData.filter(function (item) {
+          return item.homeType == _this3.state.homeType;
+        });
+      }
+
+      this.setState({
+        filteredData: newData
       });
     }
   }, {
@@ -183,7 +213,7 @@ var App = function (_Component) {
           "section",
           { id: "content-area" },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
@@ -251,12 +281,22 @@ var Filter = function (_Component) {
             "Filter"
           ),
           _react2.default.createElement(
+            "label",
+            { htmlFor: "city" },
+            "City"
+          ),
+          _react2.default.createElement(
             "select",
             {
-              name: "neighborhood",
-              className: "filters  neighborhood",
+              name: "city",
+              className: "filters  city",
               onChange: this.props.change
             },
+            _react2.default.createElement(
+              "option",
+              { value: "All" },
+              "All"
+            ),
             _react2.default.createElement(
               "option",
               { value: "Los Angeles" },
@@ -269,12 +309,22 @@ var Filter = function (_Component) {
             )
           ),
           _react2.default.createElement(
+            "label",
+            { htmlFor: "city" },
+            "Home Type"
+          ),
+          _react2.default.createElement(
             "select",
             {
-              name: "housetype",
-              className: " filters housetype",
+              name: "homeType",
+              className: " filters homeType",
               onChange: this.props.change
             },
+            _react2.default.createElement(
+              "option",
+              { value: "All" },
+              "All"
+            ),
             _react2.default.createElement(
               "option",
               { value: "Apartment" },
@@ -297,6 +347,11 @@ var Filter = function (_Component) {
             )
           ),
           _react2.default.createElement(
+            "label",
+            { htmlFor: "city" },
+            "Bedrooms"
+          ),
+          _react2.default.createElement(
             "select",
             {
               name: "bedrooms",
@@ -305,23 +360,28 @@ var Filter = function (_Component) {
             },
             _react2.default.createElement(
               "option",
+              { value: "0" },
+              "0+ BR"
+            ),
+            _react2.default.createElement(
+              "option",
               { value: "1" },
-              "1 BR"
+              "1+ BR"
             ),
             _react2.default.createElement(
               "option",
               { value: "2" },
-              "2 BR"
+              "2+ BR"
             ),
             _react2.default.createElement(
               "option",
               { value: "3" },
-              "3 BR"
+              "3+ BR"
             ),
             _react2.default.createElement(
               "option",
               { value: "4" },
-              "4 BR"
+              "4+ BR"
             )
           ),
           _react2.default.createElement(
@@ -567,6 +627,11 @@ var Listings = function (_Component) {
     key: "loopListings",
     value: function loopListings() {
       var listingsData = this.props.listingsData;
+
+
+      if (listingsData == undefined || listingsData.length == 0) {
+        return "sorry your filter did not match any listing";
+      }
 
       return listingsData.map(function (listing, index) {
         return _react2.default.createElement(
