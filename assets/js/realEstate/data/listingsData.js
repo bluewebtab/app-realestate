@@ -6,7 +6,7 @@ var listingsData = [
     rooms: 2,
     price: 225000,
     floorSpace: 2300,
-    extras: ["elevator", "Swimming pool"],
+    extras: ["elevator", "swimming_pool"],
     homeType: "Apartment",
     image:
       "https://www.esgntv.com/pequeno/esgntv/apartment-living-room-small-luxury-creative-lovely-luxury-small-living-room-4-1610-x-1288-peq.jpg"
@@ -18,8 +18,8 @@ var listingsData = [
     rooms: 1,
     price: 260000,
     floorSpace: 2500,
-    extras: ["Swimming pool", "gym"],
-    homeType: "Apartment",
+    extras: ["swimming_pool", "gym"],
+    homeType: "Studio",
     image:
       "https://static.designboom.com/wp-content/uploads/2016/05/rocker-lange-architects-h-residence-hong-kong-designboom-250.jpg"
   },
@@ -31,7 +31,7 @@ var listingsData = [
     price: 300000,
     floorSpace: 2400,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "Studio",
     image:
       "https://s-media-cache-ak0.pinimg.com/originals/2f/67/21/2f672115639fb45c1502b02f2f501289.jpg"
   },
@@ -42,7 +42,7 @@ var listingsData = [
     rooms: 2,
     price: 250000,
     floorSpace: 1900,
-    extras: ["elevator", "Swimming pool"],
+    extras: ["elevator", "swimming_pool"],
     homeType: "Apartment",
     image:
       "https://www.fps86.com/klein/fps86/great-apartment-interior-design-minimalist-ideas-inspired-luxurious-captivating-beautiful-cool-apartment-living-rooms-1-800-x-640-small.jpg"
@@ -54,8 +54,8 @@ var listingsData = [
     rooms: 4,
     price: 240000,
     floorSpace: 2100,
-    extras: ["Swimming pool", "gym"],
-    homeType: "Condo",
+    extras: ["swimming_pool", "gym"],
+    homeType: "Townhouse",
     image:
       "https://www.designboom.com/wp-content/uploads/2016/06/batlabdesignboom250.jpg"
   },
@@ -78,8 +78,8 @@ var listingsData = [
     rooms: 3,
     price: 210000,
     floorSpace: 2200,
-    extras: ["elevator", "Swimming pool"],
-    homeType: "Apartment",
+    extras: ["elevator", "swimming_pool"],
+    homeType: "Condo",
     image:
       "https://image.staah.net/images/roomImage/small_5_28307_THZQJhQhlg_bedroom-portrait-DSC_8437-Edit.jpg"
   },
@@ -91,7 +91,7 @@ var listingsData = [
     price: 260000,
     floorSpace: 2100,
     extras: ["elevator", "gym"],
-    homeType: "Condo",
+    homeType: "Townhouse",
     image:
       "http://www.thematador.us/wp-content/uploads/2017/07/small-studio-apartment-bedroomapartments-with-wood-floors-in-orlando--apartments-jacksonville-fl-250x200.jpg"
   }
