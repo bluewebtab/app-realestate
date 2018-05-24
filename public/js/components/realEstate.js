@@ -18,7 +18,7 @@ var listingsData = [{
   floorSpace: 2300,
   extras: ["elevator", "swimming_pool"],
   homeType: "Apartment",
-  image: "https://www.esgntv.com/pequeno/esgntv/apartment-living-room-small-luxury-creative-lovely-luxury-small-living-room-4-1610-x-1288-peq.jpg"
+  image: "http://cdn.wall2wallmedia.com/backend/projects/4600/500x375/4600_05_201709191206188381.jpg"
 }, {
   address: "1256 Straight ave",
   city: "San Francisco",
@@ -28,7 +28,7 @@ var listingsData = [{
   floorSpace: 2500,
   extras: ["swimming_pool", "gym"],
   homeType: "Studio",
-  image: "https://static.designboom.com/wp-content/uploads/2016/05/rocker-lange-architects-h-residence-hong-kong-designboom-250.jpg"
+  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2225973/listing_photo/342594836/full.jpg"
 }, {
   address: "1267 Lamp ave",
   city: "Los Angeles",
@@ -38,7 +38,7 @@ var listingsData = [{
   floorSpace: 2400,
   extras: ["elevator", "gym"],
   homeType: "Studio",
-  image: "https://s-media-cache-ak0.pinimg.com/originals/2f/67/21/2f672115639fb45c1502b02f2f501289.jpg"
+  image: "https://cdn-images-1.medium.com/max/1600/1*xI672mMloU91FoYukFIjqw.jpeg"
 }, {
   address: "1278 Tampa ave",
   city: "Malibu",
@@ -48,7 +48,7 @@ var listingsData = [{
   floorSpace: 1900,
   extras: ["elevator", "swimming_pool"],
   homeType: "Apartment",
-  image: "https://www.fps86.com/klein/fps86/great-apartment-interior-design-minimalist-ideas-inspired-luxurious-captivating-beautiful-cool-apartment-living-rooms-1-800-x-640-small.jpg"
+  image: "http://siglo21web.weebly.com/uploads/3/0/5/4/30543716/9836964_orig.jpg"
 }, {
   address: "1348 Black ave",
   city: "Thousand Oaks",
@@ -58,7 +58,7 @@ var listingsData = [{
   floorSpace: 2100,
   extras: ["swimming_pool", "gym"],
   homeType: "Townhouse",
-  image: "https://www.designboom.com/wp-content/uploads/2016/06/batlabdesignboom250.jpg"
+  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2241567/listing_photo/334250635/full.jpg"
 }, {
   address: "1444 Grass ave",
   city: "Beverly Hills",
@@ -68,7 +68,7 @@ var listingsData = [{
   floorSpace: 2300,
   extras: ["elevator", "gym"],
   homeType: "Condo",
-  image: "http://www.decodernyc.com/wp-content/uploads/2015/07/small-apartment-nyc-2.jpg"
+  image: "https://pattayaproperty.pro/wp-content/uploads/rem/2161-0003/20140409175415_Atrium-Imperial-twins-condo-for-sale-Pattaya-Thailand.jpg"
 }, {
   address: "1897 Tile ave",
   city: "Sherman Oaks",
@@ -78,7 +78,7 @@ var listingsData = [{
   floorSpace: 2200,
   extras: ["elevator", "swimming_pool"],
   homeType: "Condo",
-  image: "https://image.staah.net/images/roomImage/small_5_28307_THZQJhQhlg_bedroom-portrait-DSC_8437-Edit.jpg"
+  image: "https://themiamiproperties.com/wp-content/uploads/2017/09/majestic-bal-harbour-rentals-sales-1-500x250.jpg"
 }, {
   address: "1907 Blank ave",
   city: "Simi Valley",
@@ -88,7 +88,7 @@ var listingsData = [{
   floorSpace: 2100,
   extras: ["elevator", "gym"],
   homeType: "Townhouse",
-  image: "http://www.thematador.us/wp-content/uploads/2017/07/small-studio-apartment-bedroomapartments-with-wood-floors-in-orlando--apartments-jacksonville-fl-250x200.jpg"
+  image: "http://s2.localzbest.com/localzbest-7a74f49fe33f080b6669105e126c42b5.jpg"
 }];
 
 exports.default = listingsData;
@@ -169,6 +169,7 @@ var App = function (_Component) {
     _this.change = _this.change.bind(_this);
     _this.filteredData = _this.filteredData.bind(_this);
     _this.populateForms = _this.populateForms.bind(_this);
+    _this.changeView = _this.changeView.bind(_this);
     return _this;
   }
 
@@ -188,10 +189,18 @@ var App = function (_Component) {
       var _this2 = this;
 
       var name = event.target.name;
-      var value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
+      var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
         _this2.filteredData();
+      });
+    }
+  }, {
+    key: "changeView",
+    value: function changeView(viewName) {
+      this.setState({
+        view: viewName
       });
     }
   }, {
@@ -288,7 +297,8 @@ var App = function (_Component) {
           _react2.default.createElement(_Listings2.default, {
             listingsData: this.state.filteredData,
             change: this.change,
-            globalState: this.state
+            globalState: this.state,
+            changeView: this.changeView
           })
         )
       );
@@ -705,6 +715,8 @@ var Listings = function (_Component) {
   _createClass(Listings, [{
     key: "loopListings",
     value: function loopListings() {
+      var _this2 = this;
+
       var listingsData = this.props.listingsData;
 
 
@@ -713,103 +725,205 @@ var Listings = function (_Component) {
       }
 
       return listingsData.map(function (listing, index) {
-        return _react2.default.createElement(
-          "div",
-          { className: "col-md-3", key: index },
-          _react2.default.createElement(
+        if (_this2.props.globalState.view == "box") {
+          //this is the box view
+          return _react2.default.createElement(
             "div",
-            { className: "listing" },
+            { className: "col-md-4", key: index },
             _react2.default.createElement(
               "div",
-              {
-                className: "listing-img",
-                style: {
-                  background: "url(\"" + listing.image + "\")\n        no-repeat center center"
-                }
-              },
-              _react2.default.createElement(
-                "span",
-                { className: "address" },
-                listing.address
-              ),
+              { className: "listing" },
               _react2.default.createElement(
                 "div",
-                { className: "details" },
+                {
+                  className: "listing-img",
+                  style: {
+                    background: "url(\"" + listing.image + "\")\n          no-repeat center center"
+                  }
+                },
                 _react2.default.createElement(
-                  "div",
-                  { className: "col-md-3" },
-                  _react2.default.createElement("div", { className: "user-img" })
+                  "span",
+                  { className: "address" },
+                  listing.address
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "col-md-9" },
+                  { className: "details" },
                   _react2.default.createElement(
                     "div",
-                    { className: "user-details" },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "user-name" },
-                      "Jane Doe"
-                    ),
-                    _react2.default.createElement(
-                      "span",
-                      { className: "post-date" },
-                      "05/20/18"
-                    )
+                    { className: "col-md-3" },
+                    _react2.default.createElement("div", { className: "user-img" })
                   ),
                   _react2.default.createElement(
                     "div",
-                    { className: "listing-details" },
+                    { className: "col-md-9" },
                     _react2.default.createElement(
                       "div",
-                      { className: "floor-space" },
-                      _react2.default.createElement("i", { className: "ico far fa-square" }),
+                      { className: "user-details" },
                       _react2.default.createElement(
                         "span",
-                        null,
-                        "1000 ft\xB2"
+                        { className: "user-name" },
+                        "Jane Doe"
+                      ),
+                      _react2.default.createElement(
+                        "span",
+                        { className: "post-date" },
+                        "05/20/18"
                       )
                     ),
                     _react2.default.createElement(
                       "div",
-                      { className: "bedrooms" },
-                      _react2.default.createElement("i", { className: "ico fas fa-bed" }),
+                      { className: "listing-details" },
                       _react2.default.createElement(
-                        "span",
-                        null,
-                        listing.rooms,
-                        " bedrooms"
+                        "div",
+                        { className: "floor-space" },
+                        _react2.default.createElement("i", { className: "ico far fa-square" }),
+                        _react2.default.createElement(
+                          "span",
+                          null,
+                          "1000 ft\xB2"
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "bedrooms" },
+                        _react2.default.createElement("i", { className: "ico fas fa-bed" }),
+                        _react2.default.createElement(
+                          "span",
+                          null,
+                          listing.rooms,
+                          " bedrooms"
+                        )
                       )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "view-btn" },
+                      "View listings"
                     )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "view-btn" },
-                    "View listings"
                   )
                 )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "bottom-info" },
-              _react2.default.createElement(
-                "span",
-                { className: "price" },
-                "$",
-                listing.price
               ),
               _react2.default.createElement(
-                "span",
-                { className: "location" },
-                _react2.default.createElement("i", { className: " ico far fa-compass" }),
-                listing.city,
-                ", ",
-                listing.state
+                "div",
+                { className: "bottom-info" },
+                _react2.default.createElement(
+                  "span",
+                  { className: "price" },
+                  "$",
+                  listing.price
+                ),
+                _react2.default.createElement(
+                  "span",
+                  { className: "location" },
+                  _react2.default.createElement("i", { className: " ico far fa-compass" }),
+                  listing.city,
+                  ", ",
+                  listing.state
+                )
               )
             )
-          )
-        );
+          );
+        } else {
+          //this is the long view
+          return _react2.default.createElement(
+            "div",
+            { className: "col-md-6", key: index },
+            _react2.default.createElement(
+              "div",
+              { className: "listing " },
+              _react2.default.createElement(
+                "div",
+                {
+                  className: "listing-img",
+                  style: {
+                    background: "url(\"" + listing.image + "\")\n          no-repeat center center"
+                  }
+                },
+                _react2.default.createElement(
+                  "span",
+                  { className: "address" },
+                  listing.address
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "col-md-3" },
+                    _react2.default.createElement("div", { className: "user-img" })
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "col-md-9" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "user-details" },
+                      _react2.default.createElement(
+                        "span",
+                        { className: "user-name" },
+                        "Jane Doe"
+                      ),
+                      _react2.default.createElement(
+                        "span",
+                        { className: "post-date" },
+                        "05/20/18"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "listing-details" },
+                      _react2.default.createElement(
+                        "div",
+                        { className: "floor-space" },
+                        _react2.default.createElement("i", { className: "ico far fa-square" }),
+                        _react2.default.createElement(
+                          "span",
+                          null,
+                          "1000 ft\xB2"
+                        )
+                      ),
+                      _react2.default.createElement(
+                        "div",
+                        { className: "bedrooms" },
+                        _react2.default.createElement("i", { className: "ico fas fa-bed" }),
+                        _react2.default.createElement(
+                          "span",
+                          null,
+                          listing.rooms,
+                          " bedrooms"
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "view-btn" },
+                      "View listings"
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "bottom-info" },
+                _react2.default.createElement(
+                  "span",
+                  { className: "price" },
+                  "$",
+                  listing.price
+                ),
+                _react2.default.createElement(
+                  "span",
+                  { className: "location" },
+                  _react2.default.createElement("i", { className: " ico far fa-compass" }),
+                  listing.city,
+                  ", ",
+                  listing.state
+                )
+              )
+            )
+          );
+        }
       });
     }
   }, {
@@ -855,8 +969,14 @@ var Listings = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "view" },
-              _react2.default.createElement("i", { className: "ico fas fa-th-list" }),
-              _react2.default.createElement("i", { className: " ico fas fa-th" })
+              _react2.default.createElement("i", {
+                className: "ico fas fa-th-list",
+                onClick: this.props.changeView.bind(null, "long")
+              }),
+              _react2.default.createElement("i", {
+                className: " ico fas fa-th",
+                onClick: this.props.changeView.bind(null, "box")
+              })
             )
           )
         ),

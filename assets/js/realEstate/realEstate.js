@@ -7,7 +7,7 @@ import listingsData from "./data/listingsData.js";
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       name: "Joe",
       listingsData,
@@ -30,6 +30,7 @@ class App extends Component {
     this.change = this.change.bind(this);
     this.filteredData = this.filteredData.bind(this);
     this.populateForms = this.populateForms.bind(this);
+    this.changeView = this.changeView.bind(this);
   }
   componentWillMount() {
     var listingsData = this.state.listingsData.sort((a, b) => {
@@ -39,12 +40,10 @@ class App extends Component {
       listingsData
     });
   }
-  change(event) {
-    var name = event.target.name;
-    var value =
-      event.target.type === "checkbox"
-        ? event.target.checked
-        : event.target.value;
+  change(event){
+    var name = event.target.name
+    var value = (event.target.type === 'checkbox') ? event.target.checked : event.target.value
+
     this.setState(
       {
         [name]: value
@@ -52,8 +51,12 @@ class App extends Component {
       () => {
         console.log(this.state);
         this.filteredData();
-      }
-    );
+      })
+  }
+  changeView(viewName) {
+    this.setState({
+      view: viewName
+    })
   }
   filteredData() {
     var newData = this.state.listingsData.filter(item => {
@@ -146,6 +149,7 @@ class App extends Component {
             listingsData={this.state.filteredData}
             change={this.change}
             globalState={this.state}
+            changeView={this.changeView}
           />
         </section>
       </div>

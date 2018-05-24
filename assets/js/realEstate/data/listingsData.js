@@ -9,7 +9,7 @@ var listingsData = [
     extras: ["elevator", "swimming_pool"],
     homeType: "Apartment",
     image:
-      "https://www.esgntv.com/pequeno/esgntv/apartment-living-room-small-luxury-creative-lovely-luxury-small-living-room-4-1610-x-1288-peq.jpg"
+      "http://cdn.wall2wallmedia.com/backend/projects/4600/500x375/4600_05_201709191206188381.jpg"
   },
   {
     address: "1256 Straight ave",
@@ -21,7 +21,7 @@ var listingsData = [
     extras: ["swimming_pool", "gym"],
     homeType: "Studio",
     image:
-      "https://static.designboom.com/wp-content/uploads/2016/05/rocker-lange-architects-h-residence-hong-kong-designboom-250.jpg"
+      "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2225973/listing_photo/342594836/full.jpg"
   },
   {
     address: "1267 Lamp ave",
@@ -33,7 +33,7 @@ var listingsData = [
     extras: ["elevator", "gym"],
     homeType: "Studio",
     image:
-      "https://s-media-cache-ak0.pinimg.com/originals/2f/67/21/2f672115639fb45c1502b02f2f501289.jpg"
+      "https://cdn-images-1.medium.com/max/1600/1*xI672mMloU91FoYukFIjqw.jpeg"
   },
   {
     address: "1278 Tampa ave",
@@ -45,7 +45,7 @@ var listingsData = [
     extras: ["elevator", "swimming_pool"],
     homeType: "Apartment",
     image:
-      "https://www.fps86.com/klein/fps86/great-apartment-interior-design-minimalist-ideas-inspired-luxurious-captivating-beautiful-cool-apartment-living-rooms-1-800-x-640-small.jpg"
+      "http://siglo21web.weebly.com/uploads/3/0/5/4/30543716/9836964_orig.jpg"
   },
   {
     address: "1348 Black ave",
@@ -57,7 +57,7 @@ var listingsData = [
     extras: ["swimming_pool", "gym"],
     homeType: "Townhouse",
     image:
-      "https://www.designboom.com/wp-content/uploads/2016/06/batlabdesignboom250.jpg"
+      "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2241567/listing_photo/334250635/full.jpg"
   },
   {
     address: "1444 Grass ave",
@@ -69,7 +69,7 @@ var listingsData = [
     extras: ["elevator", "gym"],
     homeType: "Condo",
     image:
-      "http://www.decodernyc.com/wp-content/uploads/2015/07/small-apartment-nyc-2.jpg"
+      "https://pattayaproperty.pro/wp-content/uploads/rem/2161-0003/20140409175415_Atrium-Imperial-twins-condo-for-sale-Pattaya-Thailand.jpg"
   },
   {
     address: "1897 Tile ave",
@@ -81,7 +81,7 @@ var listingsData = [
     extras: ["elevator", "swimming_pool"],
     homeType: "Condo",
     image:
-      "https://image.staah.net/images/roomImage/small_5_28307_THZQJhQhlg_bedroom-portrait-DSC_8437-Edit.jpg"
+      "https://themiamiproperties.com/wp-content/uploads/2017/09/majestic-bal-harbour-rentals-sales-1-500x250.jpg"
   },
   {
     address: "1907 Blank ave",
@@ -93,7 +93,7 @@ var listingsData = [
     extras: ["elevator", "gym"],
     homeType: "Townhouse",
     image:
-      "http://www.thematador.us/wp-content/uploads/2017/07/small-studio-apartment-bedroomapartments-with-wood-floors-in-orlando--apartments-jacksonville-fl-250x200.jpg"
+      "http://s2.localzbest.com/localzbest-7a74f49fe33f080b6669105e126c42b5.jpg"
   }
 ];
 
