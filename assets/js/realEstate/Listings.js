@@ -13,7 +13,7 @@ export default class Listings extends Component {
     var { listingsData } = this.props;
 
     if (listingsData == undefined || listingsData.length == 0) {
-      return "sorry your filter did not match any listing";
+      return "Sorry your filter did not match any listing";
     }
 
     return listingsData.map((listing, index) => {
@@ -76,9 +76,13 @@ export default class Listings extends Component {
         <section className="sortby-area">
           <div className="results">390 results found</div>
           <div className="sort-options">
-            <select name="sortby" className="sortby">
-              <option value="price-asc">Highest Price</option>
+            <select
+              name="sortby"
+              className="sortby"
+              onChange={this.props.change}
+            >
               <option value="price-dsc">Lowest Price</option>
+              <option value="price-asc">Highest Price</option>
             </select>
             <div className="view">
               <i className="ico fas fa-th-list" />

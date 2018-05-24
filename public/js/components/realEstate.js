@@ -161,7 +161,9 @@ var App = function (_Component) {
       swimming_pool: false,
       gym: false,
       filteredData: _listingsData2.default,
-      populateFormsData: ""
+      populateFormsData: "",
+      sortby: "price-dsc",
+      view: "box"
     };
 
     _this.change = _this.change.bind(_this);
@@ -171,6 +173,16 @@ var App = function (_Component) {
   }
 
   _createClass(App, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var listingsData = this.state.listingsData.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      this.setState({
+        listingsData: listingsData
+      });
+    }
+  }, {
     key: "change",
     value: function change(event) {
       var _this2 = this;
@@ -202,6 +214,18 @@ var App = function (_Component) {
         });
       }
 
+      if (this.state.sortby == "price-dsc") {
+        newData = newData.sort(function (a, b) {
+          return a.price - b.price;
+        });
+      }
+
+      if (this.state.sortby == "price-asc") {
+        newData = newData.sort(function (a, b) {
+          return b.price - a.price;
+        });
+      }
+
       this.setState({
         filteredData: newData
       });
@@ -217,6 +241,7 @@ var App = function (_Component) {
       });
       cities = new Set(cities);
       cities = [].concat(_toConsumableArray(cities));
+      cities = cities.sort();
 
       //homeType
       var homeTypes = this.state.listingsData.map(function (item) {
@@ -224,12 +249,16 @@ var App = function (_Component) {
       });
       homeTypes = new Set(homeTypes);
       homeTypes = [].concat(_toConsumableArray(homeTypes));
+
+      homeTypes = homeTypes.sort();
       //bedrooms
       var bedrooms = this.state.listingsData.map(function (item) {
         return item.rooms;
       });
       bedrooms = new Set(bedrooms);
       bedrooms = [].concat(_toConsumableArray(bedrooms));
+
+      bedrooms = bedrooms.sort();
 
       this.setState({
         populateFormsData: {
@@ -256,7 +285,11 @@ var App = function (_Component) {
             globalState: this.state,
             populateAction: this.populateForms
           }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
+          _react2.default.createElement(_Listings2.default, {
+            listingsData: this.state.filteredData,
+            change: this.change,
+            globalState: this.state
+          })
         )
       );
     }
@@ -676,7 +709,7 @@ var Listings = function (_Component) {
 
 
       if (listingsData == undefined || listingsData.length == 0) {
-        return "sorry your filter did not match any listing";
+        return "Sorry your filter did not match any listing";
       }
 
       return listingsData.map(function (listing, index) {
@@ -803,16 +836,20 @@ var Listings = function (_Component) {
             { className: "sort-options" },
             _react2.default.createElement(
               "select",
-              { name: "sortby", className: "sortby" },
-              _react2.default.createElement(
-                "option",
-                { value: "price-asc" },
-                "Highest Price"
-              ),
+              {
+                name: "sortby",
+                className: "sortby",
+                onChange: this.props.change
+              },
               _react2.default.createElement(
                 "option",
                 { value: "price-dsc" },
                 "Lowest Price"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "price-asc" },
+                "Highest Price"
               )
             ),
             _react2.default.createElement(
