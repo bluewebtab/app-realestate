@@ -119,7 +119,7 @@ export default class Listings extends Component {
 
   render() {
     return (
-      <section id="listings">
+      <section id="listings" name = "scroll-to-element">
         <section className="search-area">
           <input type="text" name="search" onChange={this.props.change} />
         </section>

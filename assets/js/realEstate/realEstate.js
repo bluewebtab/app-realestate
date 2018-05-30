@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "./Header.js";
+import Banner from "./Banner.js";
 import Filter from "./Filter.js";
 import Listings from "./Listings.js";
 import listingsData from "./data/listingsData.js";
+
 
 class App extends Component {
   constructor() {
@@ -153,12 +155,13 @@ class App extends Component {
       <div>
         <Header />
         <section id="content-area">
+          <Banner />
           <Filter
             change={this.change}
             globalState={this.state}
             populateAction={this.populateForms}
           />
-          <Listings
+          <Listings 
             listingsData={this.state.filteredData}
             change={this.change}
             globalState={this.state}

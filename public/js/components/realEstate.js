@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 100:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9,129 +9,16 @@ webpackJsonp([0],{
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var listingsData = [{
-  address: "1245 Box ave",
-  city: "Beverly Hills",
-  state: "CA",
-  rooms: 1,
-  price: 225000,
-  floorSpace: 2300,
-  extras: ["elevator", "swimming_pool"],
-  homeType: "Apartment",
-  image: "http://cdn.wall2wallmedia.com/backend/projects/4600/500x375/4600_05_201709191206188381.jpg"
-}, {
-  address: "1256 Straight ave",
-  city: "San Francisco",
-  state: "CA",
-  rooms: 2,
-  price: 260000,
-  floorSpace: 2500,
-  extras: ["swimming_pool", "gym"],
-  homeType: "Studio",
-  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2225973/listing_photo/342594836/full.jpg"
-}, {
-  address: "1267 Lamp ave",
-  city: "Los Angeles",
-  state: "CA",
-  rooms: 3,
-  price: 300000,
-  floorSpace: 2400,
-  extras: ["elevator", "gym"],
-  homeType: "Studio",
-  image: "https://cdn-images-1.medium.com/max/1600/1*xI672mMloU91FoYukFIjqw.jpeg"
-}, {
-  address: "1278 Tampa ave",
-  city: "Malibu",
-  state: "CA",
-  rooms: 2,
-  price: 250000,
-  floorSpace: 1900,
-  extras: ["elevator", "swimming_pool"],
-  homeType: "Apartment",
-  image: "http://siglo21web.weebly.com/uploads/3/0/5/4/30543716/9836964_orig.jpg"
-}, {
-  address: "1348 Black ave",
-  city: "Thousand Oaks",
-  state: "CA",
-  rooms: 4,
-  price: 240000,
-  floorSpace: 2100,
-  extras: ["swimming_pool", "gym"],
-  homeType: "Townhouse",
-  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2241567/listing_photo/334250635/full.jpg"
-}, {
-  address: "1444 Grass ave",
-  city: "Beverly Hills",
-  state: "CA",
-  rooms: 4,
-  price: 230000,
-  floorSpace: 2300,
-  extras: ["elevator", "gym"],
-  homeType: "Condo",
-  image: "https://pattayaproperty.pro/wp-content/uploads/rem/2161-0003/20140409175415_Atrium-Imperial-twins-condo-for-sale-Pattaya-Thailand.jpg"
-}, {
-  address: "1897 Tile ave",
-  city: "Sherman Oaks",
-  state: "CA",
-  rooms: 3,
-  price: 210000,
-  floorSpace: 2200,
-  extras: ["elevator", "swimming_pool"],
-  homeType: "Condo",
-  image: "https://themiamiproperties.com/wp-content/uploads/2017/09/majestic-bal-harbour-rentals-sales-1-500x250.jpg"
-}, {
-  address: "1907 Blank ave",
-  city: "Simi Valley",
-  state: "CA",
-  rooms: 2,
-  price: 260000,
-  floorSpace: 2100,
-  extras: ["elevator", "gym"],
-  homeType: "Townhouse",
-  image: "http://s2.localzbest.com/localzbest-7a74f49fe33f080b6669105e126c42b5.jpg"
-}];
-
-exports.default = listingsData;
-
-/***/ }),
-
-/***/ 102:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(25);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Header = __webpack_require__(98);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Filter = __webpack_require__(97);
-
-var _Filter2 = _interopRequireDefault(_Filter);
-
-var _Listings = __webpack_require__(99);
-
-var _Listings2 = _interopRequireDefault(_Listings);
-
-var _listingsData = __webpack_require__(100);
-
-var _listingsData2 = _interopRequireDefault(_listingsData);
+var _reactScroll = __webpack_require__(223);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -139,195 +26,72 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_Component) {
-  _inherits(App, _Component);
+var Banner = function (_Component) {
+  _inherits(Banner, _Component);
 
-  function App() {
-    _classCallCheck(this, App);
+  function Banner() {
+    _classCallCheck(this, Banner);
 
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+    var _this = _possibleConstructorReturn(this, (Banner.__proto__ || Object.getPrototypeOf(Banner)).call(this));
 
     _this.state = {
-      name: "Joe",
-      listingsData: _listingsData2.default,
-      city: "All",
-      homeType: "All",
-      bedrooms: "0",
-      min_price: 0,
-      max_price: 1000000,
-      min_floor_space: 0,
-      max_floor_space: 10000,
-      elevator: false,
-      swimming_pool: false,
-      gym: false,
-      filteredData: _listingsData2.default,
-      populateFormsData: "",
-      sortby: "price-dsc",
-      view: "box",
-      search: ''
+      name: "Joe"
     };
-
-    _this.change = _this.change.bind(_this);
-    _this.filteredData = _this.filteredData.bind(_this);
-    _this.populateForms = _this.populateForms.bind(_this);
-    _this.changeView = _this.changeView.bind(_this);
     return _this;
   }
 
-  _createClass(App, [{
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      var listingsData = this.state.listingsData.sort(function (a, b) {
-        return a.price - b.price;
-      });
-      this.setState({
-        listingsData: listingsData
-      });
-    }
-  }, {
-    key: "change",
-    value: function change(event) {
-      var _this2 = this;
-
-      var name = event.target.name;
-      var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
-
-      this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this2.state);
-        _this2.filteredData();
-      });
-    }
-  }, {
-    key: "changeView",
-    value: function changeView(viewName) {
-      this.setState({
-        view: viewName
-      });
-    }
-  }, {
-    key: "filteredData",
-    value: function filteredData() {
-      var _this3 = this;
-
-      var newData = this.state.listingsData.filter(function (item) {
-        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space && item.rooms >= _this3.state.bedrooms;
-      });
-
-      if (this.state.city != "All") {
-        newData = newData.filter(function (item) {
-          return item.city == _this3.state.city;
-        });
-      }
-      if (this.state.homeType != "All") {
-        newData = newData.filter(function (item) {
-          return item.homeType == _this3.state.homeType;
-        });
-      }
-
-      if (this.state.sortby == "price-dsc") {
-        newData = newData.sort(function (a, b) {
-          return a.price - b.price;
-        });
-      }
-
-      if (this.state.sortby == "price-asc") {
-        newData = newData.sort(function (a, b) {
-          return b.price - a.price;
-        });
-      }
-
-      if (this.state.search != '') {
-        newData = newData.filter(function (item) {
-          var city = item.city.toLowerCase();
-          var searchText = _this3.state.search.toLowerCase();
-          var n = city.match(searchText);
-
-          if (n != null) {
-            return true;
-          }
-        });
-      }
-
-      this.setState({
-        filteredData: newData
-      });
-    }
-  }, {
-    key: "populateForms",
-    value: function populateForms() {
-      var _this4 = this;
-
-      //city
-      var cities = this.state.listingsData.map(function (item) {
-        return item.city;
-      });
-      cities = new Set(cities);
-      cities = [].concat(_toConsumableArray(cities));
-      cities = cities.sort();
-
-      //homeType
-      var homeTypes = this.state.listingsData.map(function (item) {
-        return item.homeType;
-      });
-      homeTypes = new Set(homeTypes);
-      homeTypes = [].concat(_toConsumableArray(homeTypes));
-
-      homeTypes = homeTypes.sort();
-      //bedrooms
-      var bedrooms = this.state.listingsData.map(function (item) {
-        return item.rooms;
-      });
-      bedrooms = new Set(bedrooms);
-      bedrooms = [].concat(_toConsumableArray(bedrooms));
-
-      bedrooms = bedrooms.sort();
-
-      this.setState({
-        populateFormsData: {
-          homeTypes: homeTypes,
-          bedrooms: bedrooms,
-          cities: cities
-        }
-      }, function () {
-        console.log(_this4.state);
+  _createClass(Banner, [{
+    key: "scrollTo",
+    value: function scrollTo() {
+      _reactScroll.scroller.scrollTo('scroll-to-element', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
       });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(_Header2.default, null),
+        "section",
+        { id: "banner" },
         _react2.default.createElement(
-          "section",
-          { id: "content-area" },
-          _react2.default.createElement(_Filter2.default, {
-            change: this.change,
-            globalState: this.state,
-            populateAction: this.populateForms
-          }),
-          _react2.default.createElement(_Listings2.default, {
-            listingsData: this.state.filteredData,
-            change: this.change,
-            globalState: this.state,
-            changeView: this.changeView
-          })
+          "h1",
+          { className: " name" },
+          "Traveloo"
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "travelbtn", to: "#listings", onClick: function onClick() {
+              return _this2.scrollTo();
+            } },
+          "Plan today!"
         )
       );
+
+      {/* <Element name="scroll-to-element" className="element">
+         Scroll to element
+        </Element> */}
+
+      {/* <Element className="element" id="scroll-container" style={{
+         position: 'relative',
+         height: '200px',
+         overflow: 'scroll',
+         marginBottom: '100px'
+        }}> */}
     }
   }]);
 
-  return App;
+  return Banner;
 }(_react.Component);
 
-var app = document.getElementById("app");
-
-_reactDom2.default.render(_react2.default.createElement(App, null), app);
+exports.default = Banner;
 
 /***/ }),
 
-/***/ 97:
+/***/ 107:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -339,7 +103,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -598,7 +362,7 @@ exports.default = Filter;
 
 /***/ }),
 
-/***/ 98:
+/***/ 108:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -610,11 +374,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(25);
+var _reactDom = __webpack_require__(15);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -686,7 +450,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 99:
+/***/ 109:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -698,7 +462,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(16);
+var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -946,7 +710,7 @@ var Listings = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { id: "listings" },
+        { id: "listings", name: "scroll-to-element" },
         _react2.default.createElement(
           "section",
           { className: "search-area" },
@@ -1066,6 +830,338 @@ var Listings = function (_Component) {
 
 exports.default = Listings;
 
+/***/ }),
+
+/***/ 110:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  address: "1245 Box ave",
+  city: "Beverly Hills",
+  state: "CA",
+  rooms: 1,
+  price: 225000,
+  floorSpace: 2300,
+  extras: ["elevator", "swimming_pool"],
+  homeType: "Apartment",
+  image: "http://cdn.wall2wallmedia.com/backend/projects/4600/500x375/4600_05_201709191206188381.jpg"
+}, {
+  address: "1256 Straight ave",
+  city: "San Francisco",
+  state: "CA",
+  rooms: 2,
+  price: 260000,
+  floorSpace: 2500,
+  extras: ["swimming_pool", "gym"],
+  homeType: "Studio",
+  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2225973/listing_photo/342594836/full.jpg"
+}, {
+  address: "1267 Lamp ave",
+  city: "Los Angeles",
+  state: "CA",
+  rooms: 3,
+  price: 300000,
+  floorSpace: 2400,
+  extras: ["elevator", "gym"],
+  homeType: "Studio",
+  image: "https://cdn-images-1.medium.com/max/1600/1*xI672mMloU91FoYukFIjqw.jpeg"
+}, {
+  address: "1278 Tampa ave",
+  city: "Malibu",
+  state: "CA",
+  rooms: 2,
+  price: 250000,
+  floorSpace: 1900,
+  extras: ["elevator", "swimming_pool"],
+  homeType: "Apartment",
+  image: "http://siglo21web.weebly.com/uploads/3/0/5/4/30543716/9836964_orig.jpg"
+}, {
+  address: "1348 Black ave",
+  city: "Thousand Oaks",
+  state: "CA",
+  rooms: 4,
+  price: 240000,
+  floorSpace: 2100,
+  extras: ["swimming_pool", "gym"],
+  homeType: "Townhouse",
+  image: "http://s3.amazonaws.com/images2.gmls.ubertor.com/REBGV/R2241567/listing_photo/334250635/full.jpg"
+}, {
+  address: "1444 Grass ave",
+  city: "Beverly Hills",
+  state: "CA",
+  rooms: 4,
+  price: 230000,
+  floorSpace: 2300,
+  extras: ["elevator", "gym"],
+  homeType: "Condo",
+  image: "https://pattayaproperty.pro/wp-content/uploads/rem/2161-0003/20140409175415_Atrium-Imperial-twins-condo-for-sale-Pattaya-Thailand.jpg"
+}, {
+  address: "1897 Tile ave",
+  city: "Sherman Oaks",
+  state: "CA",
+  rooms: 3,
+  price: 210000,
+  floorSpace: 2200,
+  extras: ["elevator", "swimming_pool"],
+  homeType: "Condo",
+  image: "https://themiamiproperties.com/wp-content/uploads/2017/09/majestic-bal-harbour-rentals-sales-1-500x250.jpg"
+}, {
+  address: "1907 Blank ave",
+  city: "Simi Valley",
+  state: "CA",
+  rooms: 2,
+  price: 260000,
+  floorSpace: 2100,
+  extras: ["elevator", "gym"],
+  homeType: "Townhouse",
+  image: "http://s2.localzbest.com/localzbest-7a74f49fe33f080b6669105e126c42b5.jpg"
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 112:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(15);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Header = __webpack_require__(108);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Banner = __webpack_require__(106);
+
+var _Banner2 = _interopRequireDefault(_Banner);
+
+var _Filter = __webpack_require__(107);
+
+var _Filter2 = _interopRequireDefault(_Filter);
+
+var _Listings = __webpack_require__(109);
+
+var _Listings2 = _interopRequireDefault(_Listings);
+
+var _listingsData = __webpack_require__(110);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_Component) {
+  _inherits(App, _Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.state = {
+      name: "Joe",
+      listingsData: _listingsData2.default,
+      city: "All",
+      homeType: "All",
+      bedrooms: "0",
+      min_price: 0,
+      max_price: 1000000,
+      min_floor_space: 0,
+      max_floor_space: 10000,
+      elevator: false,
+      swimming_pool: false,
+      gym: false,
+      filteredData: _listingsData2.default,
+      populateFormsData: "",
+      sortby: "price-dsc",
+      view: "box",
+      search: ''
+    };
+
+    _this.change = _this.change.bind(_this);
+    _this.filteredData = _this.filteredData.bind(_this);
+    _this.populateForms = _this.populateForms.bind(_this);
+    _this.changeView = _this.changeView.bind(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var listingsData = this.state.listingsData.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      this.setState({
+        listingsData: listingsData
+      });
+    }
+  }, {
+    key: "change",
+    value: function change(event) {
+      var _this2 = this;
+
+      var name = event.target.name;
+      var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+
+      this.setState(_defineProperty({}, name, value), function () {
+        console.log(_this2.state);
+        _this2.filteredData();
+      });
+    }
+  }, {
+    key: "changeView",
+    value: function changeView(viewName) {
+      this.setState({
+        view: viewName
+      });
+    }
+  }, {
+    key: "filteredData",
+    value: function filteredData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space && item.rooms >= _this3.state.bedrooms;
+      });
+
+      if (this.state.city != "All") {
+        newData = newData.filter(function (item) {
+          return item.city == _this3.state.city;
+        });
+      }
+      if (this.state.homeType != "All") {
+        newData = newData.filter(function (item) {
+          return item.homeType == _this3.state.homeType;
+        });
+      }
+
+      if (this.state.sortby == "price-dsc") {
+        newData = newData.sort(function (a, b) {
+          return a.price - b.price;
+        });
+      }
+
+      if (this.state.sortby == "price-asc") {
+        newData = newData.sort(function (a, b) {
+          return b.price - a.price;
+        });
+      }
+
+      if (this.state.search != '') {
+        newData = newData.filter(function (item) {
+          var city = item.city.toLowerCase();
+          var searchText = _this3.state.search.toLowerCase();
+          var n = city.match(searchText);
+
+          if (n != null) {
+            return true;
+          }
+        });
+      }
+
+      this.setState({
+        filteredData: newData
+      });
+    }
+  }, {
+    key: "populateForms",
+    value: function populateForms() {
+      var _this4 = this;
+
+      //city
+      var cities = this.state.listingsData.map(function (item) {
+        return item.city;
+      });
+      cities = new Set(cities);
+      cities = [].concat(_toConsumableArray(cities));
+      cities = cities.sort();
+
+      //homeType
+      var homeTypes = this.state.listingsData.map(function (item) {
+        return item.homeType;
+      });
+      homeTypes = new Set(homeTypes);
+      homeTypes = [].concat(_toConsumableArray(homeTypes));
+
+      homeTypes = homeTypes.sort();
+      //bedrooms
+      var bedrooms = this.state.listingsData.map(function (item) {
+        return item.rooms;
+      });
+      bedrooms = new Set(bedrooms);
+      bedrooms = [].concat(_toConsumableArray(bedrooms));
+
+      bedrooms = bedrooms.sort();
+
+      this.setState({
+        populateFormsData: {
+          homeTypes: homeTypes,
+          bedrooms: bedrooms,
+          cities: cities
+        }
+      }, function () {
+        console.log(_this4.state);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(
+          "section",
+          { id: "content-area" },
+          _react2.default.createElement(_Banner2.default, null),
+          _react2.default.createElement(_Filter2.default, {
+            change: this.change,
+            globalState: this.state,
+            populateAction: this.populateForms
+          }),
+          _react2.default.createElement(_Listings2.default, {
+            listingsData: this.state.filteredData,
+            change: this.change,
+            globalState: this.state,
+            changeView: this.changeView
+          })
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+var app = document.getElementById("app");
+
+_reactDom2.default.render(_react2.default.createElement(App, null), app);
+
 /***/ })
 
-},[102]);
+},[112]);
