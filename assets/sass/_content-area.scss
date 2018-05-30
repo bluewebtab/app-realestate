@@ -22,12 +22,20 @@
     color:white;
   }
 
+  .banner-desc{
+    font-size: 2rem;
+    position:absolute;
+    top: 21rem;  
+    right:31.5rem;
+    color:white;
+    text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);  }
+
   .travelbtn{
     font-weight: 500;
     font-size: 1.2rem;
     position:absolute;
-    top: 23rem;  
-    right:36rem;
+    top: 24rem;  
+    right:37rem;
     width: 10rem;
     text-align:center;
     color:white;
@@ -55,17 +63,27 @@
 .name{
    left:12rem;
 }
+.banner-desc{
+  left: 14rem;
+  width:39rem;
+}
 .travelbtn{
   left:18rem;
 }
+
 
 }
 
 @media only screen and (max-width: 480px){ 
 .name{
-    left: 30px;
+    left: 1.6rem;
 
   }
+  .banner-desc{
+    left: 3rem;
+    width:39rem;
+  }
+
   .travelbtn{
     left:8rem;
   }

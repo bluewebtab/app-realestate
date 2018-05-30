@@ -60,14 +60,19 @@ var Banner = function (_Component) {
         _react2.default.createElement(
           "h1",
           { className: " name" },
-          "Traveloo"
+          "Rentaloo"
+        ),
+        _react2.default.createElement(
+          "p",
+          { className: "banner-desc" },
+          "Find your Future Home!"
         ),
         _react2.default.createElement(
           "a",
           { className: "travelbtn", to: "#listings", onClick: function onClick() {
               return _this2.scrollTo();
             } },
-          "Plan today!"
+          "Search"
         )
       );
 
