@@ -24,9 +24,11 @@
 
   .banner-desc{
     font-size: 2rem;
-    position:absolute;
-    top: 21rem;  
-    right:31.5rem;
+    position: absolute;
+    left: 42%;
+    top:52%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
     color:white;
     text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);  }
 
@@ -64,8 +66,10 @@
    left:12rem;
 }
 .banner-desc{
-  left: 14rem;
-  width:39rem;
+  position: relative;
+  left:38% !important;
+  margin-top: 12%;
+  
 }
 .travelbtn{
   left:18rem;
@@ -76,12 +80,14 @@
 
 @media only screen and (max-width: 480px){ 
 .name{
-    left: 1.6rem;
+    left: 2.5rem;
 
   }
   .banner-desc{
-    left: 3rem;
-    width:39rem;
+    left:25% !important;
+  margin-top: 20%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
   }
 
   .travelbtn{
@@ -89,6 +95,38 @@
   }
   
   }
+
+  @media only screen and (max-width: 420px){ 
+
+
+            header .logo {
+            display:none;
+
+            }
+
+            
+
+            .name{
+
+                left: 18%;
+                font-size: 4rem !important;
+            
+              }
+              .banner-desc{
+                display:block;
+                left:18% !important;
+                margin-top: -6%;
+              
+              
+              }
+    
+      .travelbtn{
+        display:block;
+        margin-top: 4%;
+        left:28%;
+      }
+      
+      }
 
 
 

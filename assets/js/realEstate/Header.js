@@ -15,9 +15,9 @@ export default class Header extends Component {
         <div className="logo">Logo</div>
 
         <nav>
-          <a href="#">Create Ads</a>
-          <a href="#">About Us</a>
-          <a href="#">Log in</a>
+          <a href="#" class="words">Create Ads</a>
+          <a href="#" class="words">About Us</a>
+          <a href="#" class="words">Log in</a>
           <a href="#" className="register-btn">
             Register
           </a>
