@@ -12,87 +12,81 @@
   -o-background-size: cover;
   background-size: cover;
   height: 600px;
-  width:auto;
+  width:100%;
+  position:relative;
 
+  
+  .group{
+    position:relative;
+    top:20% !important;
+  
+  
   .name{
-    font-size: 6rem;
-    position:absolute;
-    top: 15rem;  
-    right:30rem;
-    color:white;
-  }
-
-  .banner-desc{
-    font-size: 2rem;
-    position: absolute;
-    left: 42%;
-    top:58%;
-    margin-left: -50px !important;  /* 50% of your logo width */
-    color:white;
-    text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);  }
-
-  .travelbtn{ 
     
-    font-weight: 500;
-    font-size: 1.2rem;
-    position:absolute;
-    top: 24rem;  
-    right:37rem;
-    width: 10rem;
-    text-align:center;
+    font-size: 6rem;
     color:white;
-    background: rgba(12, 182, 233, 0.57);
-    padding: 10px;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-    text-decoration: none;
-    cursor:pointer;
 
-
-    &:hover{
-      background: rgba(12, 174, 233, 0.878);
+    .banner-desc{
+      font-size: 2rem;
+      color:white;
+      text-shadow: 2px 2px 9px rgba(150, 150, 150, 1); 
+     }
+  
+    .travelbtn{ 
+      
+      font-weight: 500;
+      font-size: 1.2rem;
+      color:white;
+      background: rgba(12, 182, 233, 0.57);
+      padding: 10px;
+      border-radius: 5px;
       transition: all .3s ease-in-out;
-    }
+      text-decoration: none;
+      cursor:pointer;
+  
+  
+      &:hover{
+        background: rgba(12, 174, 233, 0.878);
+        transition: all .3s ease-in-out;
+      }
+
+
+
+
+
+
+
+  }
+
+  
   
 
   }
 
 }
-
-
-
-@media only screen and (max-width: 768px){ 
-.name{
-   left:12rem;
-}
-.banner-desc{
-  position: relative;
-  left:38% !important;
-  margin-top: 12%;
-  
-}
-.travelbtn{
-  left:18rem;
 }
 
 
-}
+
 
 @media only screen and (max-width: 480px){ 
-.name{
-    left: 2.5rem;
 
+  .group{
+      position:relative;
+      top: 60% !important;
+
+  
+.name{
+   font-size: 1rem;
   }
   .banner-desc{
-    left:25% !important;
-  margin-top: 20%;
-    margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
   }
 
   .travelbtn{
-    left:8rem;
+    
   }
+
+}
   
   }
 
@@ -105,29 +99,25 @@
             }
            
 
-            
+            .group{
+              position:relative;
+              top: 60% !important;
+        
+          
+        .name{
+           font-size: 5rem !important;
+          }
+          .banner-desc{
+            font-size: 1.7rem !important;
 
+          }
+        
+          .travelbtn{
             
-
-            .name{
-
-                left: 18%;
-                font-size: 4rem !important;
-            
-              }
-              .banner-desc{
-                
-                left:20% !important;
-                 margin-top: -10%;
-                
-              
-              }
-    
-      .travelbtn{
-       
-        margin-top: 4%;
-        left:28%;
-      }
+          }
+        
+        }
+             
       
       }
 

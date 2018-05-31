@@ -58,21 +58,27 @@ var Banner = function (_Component) {
         "section",
         { id: "banner" },
         _react2.default.createElement(
-          "h1",
-          { className: " name" },
-          "Rentaloo"
-        ),
-        _react2.default.createElement(
-          "p",
-          { className: "banner-desc" },
-          "Find your Future Home!"
-        ),
-        _react2.default.createElement(
-          "a",
-          { className: "travelbtn", to: "#listings", onClick: function onClick() {
-              return _this2.scrollTo();
-            } },
-          "Search"
+          "div",
+          { className: " group center-xs center-sm center-md center-lg" },
+          _react2.default.createElement(
+            "h1",
+            { className: " name " },
+            "Rentaloo",
+            _react2.default.createElement("br", null),
+            _react2.default.createElement(
+              "span",
+              { className: "banner-desc" },
+              "Find your future home!"
+            ),
+            _react2.default.createElement("br", null),
+            _react2.default.createElement(
+              "a",
+              { className: "travelbtn ", to: "#listings", onClick: function onClick() {
+                  return _this2.scrollTo();
+                } },
+              "Search"
+            )
+          )
         )
       );
 

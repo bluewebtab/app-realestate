@@ -34,9 +34,17 @@ export default class Banner extends Component {
     render() {
       return (
         <section id = "banner">
-    <h1 className = " name">Rentaloo</h1>
-    <p className="banner-desc">Find your Future Home!</p>
-    <a className="travelbtn" to="#listings" onClick={() => this.scrollTo()} >Search</a>
+    <div className= " group center-xs center-sm center-md center-lg">
+    <h1 className = " name ">
+    Rentaloo
+    <br/>
+    <span className="banner-desc">Find your future home!</span>
+    <br/>
+    <a className="travelbtn " to="#listings" onClick={() => this.scrollTo()} >Search</a>
+    </h1>
+    </div>
+    
+   
     </section>);
                    
   
