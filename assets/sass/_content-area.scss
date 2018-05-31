@@ -26,13 +26,13 @@
     font-size: 2rem;
     position: absolute;
     left: 42%;
-    top:52%;
+    top:58%;
     margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
     color:white;
     text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);  }
 
-  .travelbtn{
+  .travelbtn{ 
+    
     font-weight: 500;
     font-size: 1.2rem;
     position:absolute;
@@ -116,15 +116,15 @@
             
               }
               .banner-desc{
-                display:block;
-                left:18% !important;
-                margin-top: -6%;
-              
+                
+                left:20% !important;
+                 margin-top: -10%;
+                
               
               }
     
       .travelbtn{
-        display:block;
+       
         margin-top: 4%;
         left:28%;
       }
