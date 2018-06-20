@@ -911,7 +911,7 @@ var listingsData = [{
   floorSpace: 2300,
   extras: ["elevator", "gym"],
   homeType: "Condo",
-  image: "https://pattayaproperty.pro/wp-content/uploads/rem/2161-0003/20140409175415_Atrium-Imperial-twins-condo-for-sale-Pattaya-Thailand.jpg"
+  image: "https://g5-orion-clients.s3.amazonaws.com/g5-c-iekds62v-sherman-residential-client/g5-cl-551h4yhgy-ethos-apartments/thumbnails/original/Ethos_Apartments.jpg?1490628514"
 }, {
   address: "1897 Tile ave",
   city: "Sherman Oaks",
