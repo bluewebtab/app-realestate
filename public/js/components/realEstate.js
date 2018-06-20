@@ -431,17 +431,17 @@ var Header = function (_Component) {
           null,
           _react2.default.createElement(
             "a",
-            { href: "#", "class": "words" },
+            { href: "#", className: "words" },
             "Create Ads"
           ),
           _react2.default.createElement(
             "a",
-            { href: "#", "class": "words" },
+            { href: "#", className: "words" },
             "About Us"
           ),
           _react2.default.createElement(
             "a",
-            { href: "#", "class": "words" },
+            { href: "#", className: "words" },
             "Log in"
           ),
           _react2.default.createElement(
