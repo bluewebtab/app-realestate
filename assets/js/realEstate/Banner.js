@@ -6,7 +6,7 @@ export default class Banner extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Joe"
+      name: "ron"
     };
   }
 

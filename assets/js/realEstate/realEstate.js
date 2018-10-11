@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      name: "Joe",
+      name: "ron",
       listingsData,
       city: "All",
       homeType: "All",

@@ -35,7 +35,7 @@ var Banner = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Banner.__proto__ || Object.getPrototypeOf(Banner)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "ron"
     };
     return _this;
   }
@@ -135,7 +135,7 @@ var Filter = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "ron"
     };
     _this.cities = _this.cities.bind(_this);
     _this.homeTypes = _this.homeTypes.bind(_this);
@@ -410,7 +410,7 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "ron"
     };
     return _this;
   }
@@ -494,7 +494,7 @@ var Listings = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "ron"
     };
     _this.loopListings = _this.loopListings.bind(_this);
     return _this;
@@ -995,7 +995,7 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: "Joe",
+      name: "ron",
       listingsData: _listingsData2.default,
       city: "All",
       homeType: "All",

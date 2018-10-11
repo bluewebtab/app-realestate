@@ -4,7 +4,7 @@ export default class Filter extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Joe"
+      name: "ron"
     };
     this.cities = this.cities.bind(this);
     this.homeTypes = this.homeTypes.bind(this);
